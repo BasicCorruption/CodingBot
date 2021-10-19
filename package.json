@@ -1,0 +1,24 @@
+{
+  "name": "codingbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BasicCorruption/CodingBot.git"
+  },
+  "author": "SidGames",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BasicCorruption/CodingBot/issues"
+  },
+  "homepage": "https://github.com/BasicCorruption/CodingBot#readme",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.13"
+  }
+}
