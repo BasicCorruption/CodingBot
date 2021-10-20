@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 require("dotenv").config();
+const { mutelist } = require("./data/mutelist.json");
 
 const client = new Discord.Client({ partials: ["CHANNEL", "GUILD_MEMBER", "MESSAGE", "REACTION", "USER"] });
 
@@ -22,8 +23,12 @@ client.on("ready", () => {
 });
 
 client.on("message", message => {
+    // these checks need to be run to not break the bot
     if (message.author.bot) return;
     if (!message.content.startsWith(process.env.prefix)) return;
+
+    // muting stuff
+    f
 
     const args = message.content.slice(process.env.prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
@@ -35,6 +40,11 @@ client.on("message", message => {
             .setTitle("About me")
             .addField("Who am I?", "I am coding bot. I do coding and help people with coding.")
         );
+        message.reply(new Discord.MessageEmbed()
+            .setTitle("Commands")
+            .addField("General", [
+                `${process.env.prefix}help  - lists the commands`
+            ]));
     }
 });
 
