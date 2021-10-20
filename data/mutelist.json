@@ -1,0 +1,15 @@
+{
+    "mutelist": [
+        {
+            "id": 0,
+            "reason": "Example",
+            "length": {
+                "perm": true,
+                "y": 0,
+                "m": 0,
+                "d": 0,
+                "s": 0
+            }
+        }
+    ]
+}
